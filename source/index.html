@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords"
+    content="discover jewellery, fashion jewellery, finest jewellery, jewellery trends, jewellery catalog">
+  <meta name="description" content="Discover picks of fashion's finest trends in our jewellery catalog">
+  <title>Chjewellery - made to be yours</title>
+  <link rel="preload" href="fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page__body">
+  <header class="header header--menu-open">
+    <div class="container header__container">
+      <div class="header__actions">
+        <button class="header__open-menu-button" type="button" aria-label="Toggle menu">
+          <svg width="25" height="18">
+            <use xlink:href="img/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="site-search site-search--menu-open">
+          <form action="https://echo.htmlacademy.ru" method="GET">
+            <label class="visually-hidden" for="site-search">Search through site content</label>
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+            <input type="search" id="site-search" name="search" placeholder="Type here to search">
+          </form>
+        </div>
+        <a class="header__logo">
+          <svg width="66" height="66">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <ul class="user-area">
+          <li class="user-area__item user-area__item--log-in user-area__item--menu-open">
+            <a class="user-area__log-in-button" href="login.html">Login</a>
+          </li>
+          <li class="user-area__item user-area__bucket">
+            <a href="#">
+              <svg width="20" height="18">
+                <use xlink:href="img/sprite.svg#icon-bag"></use>
+              </svg>
+              <span>Cart <span>0</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav class="navigation navigation--menu-open">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#">What’s new</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Chokers</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Necklaces</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Rings</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+        <ul class="navigation__list navigation__list--tablet">
+          <li class="navigation__item">
+            <a href="#">About CH</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Stores & Hours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section class="header__intro header__intro--menu-open">
+      <div class="container">
+        <h1 class="visually-hidden">Ch jewellery store</h1>
+        <h2>Perfection</h2>
+        <p>made to be yours</p>
+      </div>
+    </section>
+  </header>
+  <main></main>
+  <footer class="footer">
+
+  </footer>
+
+  <div class="modal">
+    <div class="modal__content">
+      <button class="modal__close-modal-button" type="button">
+        <span class="visually-hidden">Close modal window</span>
+      </button>
+      <div class="modal__log-in">
+        <h2>Log In</h2>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <div class="modal__input-container">
+            <label class="visually-hidden" for="modal-email">Email</label>
+            <input id="modal-email" type="email" name="email" placeholder="Your E-mail"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+          </div>
+          <div class="modal__input-container modal__input-container--pasword">
+            <label class="visually-hidden" for="modal-password">Password</label>
+            <input type="password" id="modal-password" name="password" placeholder="Password" minlength="8" required>
+            <p><a href="#">Forgot your password?</a></p>
+          </div>
+          <div class="modal__input-container">
+            <button class="modal__submit-button" type="submit">Log In</button>
+            <p>Don’t have an account? <a href="#">Sign up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

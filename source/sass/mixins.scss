@@ -11,8 +11,8 @@
 
 @mixin button-reset {
   font-family: $main-font;
+  padding: 0;
   font-size: inherit;
-  text-transform: uppercase;
   color: inherit;
   background: none;
   border: none;

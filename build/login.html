@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="discover jewellery, fashion jewellery, finest jewellery, jewellery trends, jewellery catalog">
+  <meta name="description" content="Discover picks of fashion's finest trends in our jewellery catalog">
+  <title>Chjewellery - made to be yours</title>
+  <link rel="preload" href="fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-700.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-italic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <div class="container">
+      <a class="header__logo" href="index.html">
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <main>
+    <section class="modal modal--open">
+      <h1 class="visually-hidden">Login and registration page</h1>
+      <div class="modal__content">
+        <a class="modal__close-modal-button" href="index.html">
+          <span class="visually-hidden">Close modal window</span>
+        </a>
+        <div class="modal__log-in">
+          <h2>Log In</h2>
+          <form action="https://echo.htmlacademy.ru" method="POST">
+            <div class="modal__input-container">
+              <label class="visually-hidden" for="modal-email">Email</label>
+              <input id="modal-email" type="email" name="email" placeholder="Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="">
+            </div>
+            <div class="modal__input-container modal__input-container--pasword">
+              <label class="visually-hidden" for="modal-password">Password</label>
+              <input type="password" id="modal-password" name="password" placeholder="Password" minlength="8" required="">
+              <p><a href="#">Forgot your password?</a></p>
+            </div>
+            <div class="modal__input-container">
+              <button class="modal__submit-button" type="submit">Log In</button>
+              <p>Don’t have an account? <a href="#">Sign up</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+  </section></main>
+  <footer class="footer">
+
+  </footer>
+</body>
+
+</html>

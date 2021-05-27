@@ -1,0 +1,63 @@
+.user-area {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 30%;
+  justify-content: flex-end;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: $tablet-width) {
+    flex-basis: 3.8%;
+    margin: 24px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 17px 0 0 0;
+  }
+}
+
+.user-area__item {
+  margin-right: 39px;
+
+  svg {
+    display: none;
+
+    @media (max-width: $tablet-width) {
+      display: initial;
+    }
+  }
+
+  span {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.user-area__item--log-in {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.user-area__item--menu-open {
+  @media (max-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    bottom: -27px;
+    left: 21px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 15px;
+  }
+}
