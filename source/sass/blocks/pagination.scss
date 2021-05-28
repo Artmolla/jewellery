@@ -1,0 +1,26 @@
+.pagination {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0 0 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 40px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 30px 0 0 0;
+  }
+}
+
+.pagination__item {
+  margin-right: 12px;
+  cursor: pointer;
+  color: $grey;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
