@@ -1,0 +1,45 @@
+.accordion__item {
+  position: relative;
+}
+
+.accordion__item .accordion__body {
+  display: none;
+}
+
+.accordion__item--open .accordion__body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.accordion__button {
+  @include button-reset;
+
+  position: relative;
+  width: 100%;
+  text-align: left;
+
+  &::after {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    content: "";
+    width: 17px;
+    height: 10px;
+    background-image: url("../img/icons/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.accordion__item--open .accordion__button {
+  &::after {
+    background-image: url("../img/icons/icon-arrow-up.svg");
+  }
+}
+
+.accordion__button--no-js {
+  &::after {
+    display: none;
+  }
+}
