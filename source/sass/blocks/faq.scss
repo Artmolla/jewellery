@@ -1,0 +1,42 @@
+.faq {
+  h2 {
+    margin: 0 0 48px 0;
+  }
+}
+
+.faq__container {
+  max-width: 970px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 678px;
+  }
+}
+
+.faq__list {
+  @include list-reset;
+
+  border: 1px solid $brown;
+}
+
+.faq__item {
+  border-bottom: 1px solid $brown;
+  padding: 41px 43px;
+
+  h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0;
+  }
+
+  p {
+    padding: 0 40% 0 0.7%;
+    line-height: 21px;
+    margin: 6px 0 0 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
