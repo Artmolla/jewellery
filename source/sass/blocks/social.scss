@@ -1,0 +1,15 @@
+.social {
+  @include list-reset;
+
+  margin: 5px 0 5px 0;
+
+  svg {
+    margin-right: 14px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.social__item {
+  margin: 0 0 15px 0;
+}
