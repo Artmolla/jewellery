@@ -1,6 +1,16 @@
 .faq {
+  padding: 0 0 71px 0;
+
   h2 {
     margin: 0 0 48px 0;
+
+    @media (max-width: $mobile-width) {
+      margin: 0 0 28px 0;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 0 33px 0;
   }
 }
 
@@ -28,15 +38,41 @@
     font-size: 18px;
     line-height: 23px;
     margin: 0;
+
+    @media (max-width: $mobile-width) {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0 24% 0 0;
+    }
   }
 
   p {
     padding: 0 40% 0 0.7%;
     line-height: 21px;
     margin: 6px 0 0 0;
+
+    @media (max-width: $tablet-width) {
+      padding: 0;
+      margin: 24px 0 0 0;
+      letter-spacing: -0.005em;
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 12px 0 0 0;
+    }
   }
 
   &:last-child {
     border-bottom: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 42px 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 12px 23px;
   }
 }

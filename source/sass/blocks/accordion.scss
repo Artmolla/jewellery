@@ -18,6 +18,7 @@
   position: relative;
   width: 100%;
   text-align: left;
+  letter-spacing: 0.005em;
 
   &::after {
     position: absolute;
@@ -29,6 +30,14 @@
     background-image: url("../img/icons/icon-arrow-down.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (max-width: $tablet-width) {
+      top: 8px;
+      right: 6px;
+      width: 23px;
+      height: 12px;
+      background-size: 23px 15px;
+    }
   }
 }
 
