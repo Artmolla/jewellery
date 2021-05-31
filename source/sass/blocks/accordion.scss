@@ -1,3 +1,7 @@
+.accordion {
+  @include list-reset;
+}
+
 .accordion__item {
   position: relative;
 }

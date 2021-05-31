@@ -1,0 +1,141 @@
+.filter {
+  color: $liquorice;
+
+  fieldset {
+    list-style: none;
+    margin: 0;
+    padding: 0 25px 0 25px;
+    position: relative;
+    border: 1px solid $brown;
+    border-bottom: none;
+
+    &:last-of-type {
+      border-bottom: 1px solid $brown;
+      margin-bottom: 36px;
+    }
+  }
+
+  input {
+    & + label::before {
+      position: absolute;
+      content: "";
+      left: -1px;
+      top: 3px;
+      width: 13px;
+      height: 13px;
+      border: 1px solid $brown;
+    }
+
+    &:checked + label:before {
+      background-color: $brown;
+    }
+  }
+
+  label {
+    position: relative;
+    padding-left: 24px;
+  }
+}
+
+.filter__list {
+  @include list-reset;
+
+  padding: 0 10px 12px 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.filter__item {
+  margin: 0 0 13px 0;
+}
+
+.filter__button {
+  @include button-reset;
+
+  width: 100%;
+ padding: 21px 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.filter__button--submit {
+  text-align: center;
+  margin-bottom: 25px;
+  border: 1px solid $brown;
+  background-color: $brown;
+  color: $white;
+}
+
+.filter__button--clear {
+  text-align: center;
+  border: 1px solid $brown;
+}
+
+.filter__range-scale {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  background-color: $desert-storm;
+}
+
+.filter__range-bar {
+  position: absolute;
+  left: 27.5%;
+  right: 22.5%;
+  height: 2px;
+  background-color: $brown;
+}
+
+.filter__range-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $brown;
+}
+
+.filter__range-toggle--min {
+  left: 27.5%;
+  transform: translate(-50%, -50%);
+}
+
+.filter__range-toggle--max {
+  right: 22.5%;
+}
+
+.filter__price-controls {
+  position: relative;
+  min-height: 48px;
+
+  input {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    border: 0;
+    background-color: transparent;
+    position: relative;
+  }
+
+  label {
+    position: absolute;
+  }
+}
+
+.filter__price {
+  position: absolute;
+  top: 10px;
+}
+
+.filter__price--min {
+  left: 27.5%;
+  transform: translateX(-50%);
+}
+
+.filter__price--max {
+  right: 22.5%;
+  transform: translateX(50%);
+}

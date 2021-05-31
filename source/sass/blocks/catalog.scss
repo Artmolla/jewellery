@@ -1,0 +1,9 @@
+.catalog__container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 50px;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -10,6 +10,10 @@
   }
 }
 
+.header--inner {
+  padding: 30px 0 80px 0;
+}
+
 .header--menu-open {
   @media (max-width: $tablet-width) {
     background-color: $brown;
@@ -63,6 +67,7 @@
   background-image: url("../img/backgrounds/bg-main-intro.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   h2 {
     font-style: normal;
@@ -107,6 +112,22 @@
 
   @media (max-width: $mobile-width) and (min-resolution: 1.5dppx) {
     background-image: url("../img/backgrounds/bg-main-intro-mobile@2x.jpg");
+  }
+}
+
+.header__intro--inner {
+  min-height: 261px;
+  background-image: url("../img/backgrounds/bg-catalog-intro.jpg");
+
+  h2 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
   }
 }
 
