@@ -3,9 +3,8 @@
 
 (function () {
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 4,
+    // slidesPerView: 4,
     loop: true,
-    spaceBetween: 30,
     speed: 1500,
 
     pagination: {
@@ -13,7 +12,7 @@
       clickable: true,
       renderBullet: function (index, className) {
         return '<li class=\'pagination__item '.concat(className, '\'>').concat(index + 1, '</li>');
-      }
+      },
     },
     lazy: {
       loadPrevNext: true
@@ -31,7 +30,7 @@
         pagination: {
           type: 'fraction',
           renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-            return '<li class=\''.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li~npm test class=\'').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
+            return '<li class=\'pagination__item pagination__item--active '.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'pagination__item ').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
           }
         }
       },
@@ -45,9 +44,7 @@
       1024: {
         slidesPerView: 4,
         slidesPerGroup: 4,
-        pagination: {
-          type: 'bullets'
-        }
+        spaceBetween: 30,
       }
     }
   });

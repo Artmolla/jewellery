@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 50px 0 0 0;
+  color: $grey;
 
   @media (max-width: $tablet-width) {
     padding: 40px 0 0 0;
@@ -18,9 +19,18 @@
 .pagination__item {
   margin-right: 12px;
   cursor: pointer;
-  color: $grey;
+
+  &:nth-child(2n) {
+    @media (max-width: $mobile-width) {
+      margin-left: 12px;
+    }
+  }
 
   &:last-child {
     margin-right: 0;
   }
+}
+
+.pagination__item--active {
+  color: $liquorice;
 }

@@ -1,49 +1,49 @@
-// 'use strict';
+'use strict';
 
-// (function () {
-//   if (document.querySelector('.accordion')) {
+(function () {
+  if (document.querySelector('.accordion')) {
 
-//     var accordionContent = document.querySelector('.accordion');
-//     var accordionItems = Array.from(accordionContent.querySelectorAll('.accordion__item'));
-//     var accordionButtons = Array.from(accordionContent.querySelectorAll('.accordion__button'));
+    var accordionContent = document.querySelector('.accordion');
+    var accordionItems = Array.from(accordionContent.querySelectorAll('.accordion__item'));
+    var accordionButtons = Array.from(accordionContent.querySelectorAll('.accordion__button'));
 
-//     var closeAllAccordion = function (element) {
-//       var currentElement = element || null;
+    var closeAllAccordion = function (element) {
+      var currentElement = element || null;
 
-//       accordionItems.forEach(function (it) {
-//         if (it.classList.contains('accordion__item--open') && currentElement !== it) {
-//           it.classList.remove('accordion__item--open');
-//         }
-//       });
-//     };
+      accordionItems.forEach(function (it) {
+        if (it.classList.contains('accordion__item--open') && currentElement !== it) {
+          it.classList.remove('accordion__item--open');
+        }
+      });
+    };
 
-//     var closeAccordionKeyPressHandler = function (evt) {
-//       var isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
+    var closeAccordionKeyPressHandler = function (evt) {
+      var isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
 
-//       if (isEscKey) {
-//         evt.target.closest('.accordion__item').classList.remove('accordion__item--open');
-//         evt.target.removeEventListener('keydown', closeAccordionKeyPressHandler);
-//       }
-//     };
+      if (isEscKey) {
+        evt.target.closest('.accordion__item').classList.remove('accordion__item--open');
+        evt.target.removeEventListener('keydown', closeAccordionKeyPressHandler);
+      }
+    };
 
-//     var toggleAccordionClickHandler = function (evt) {
-//       evt.preventDefault();
+    var toggleAccordionClickHandler = function (evt) {
+      evt.preventDefault();
 
-//       closeAllAccordion(evt.target.closest('.accordion__item'));
-//       evt.target.closest('.accordion__item').classList.toggle('accordion__item--open');
-//       evt.target.addEventListener('keydown', closeAccordionKeyPressHandler);
-//     };
+      closeAllAccordion(evt.target.closest('.accordion__item'));
+      evt.target.closest('.accordion__item').classList.toggle('accordion__item--open');
+      evt.target.addEventListener('keydown', closeAccordionKeyPressHandler);
+    };
 
-//     accordionButtons.forEach(function (it) {
-//       it.classList.remove('accordion__button--no-js');
-//       it.tabIndex = '0';
-//       it.addEventListener('click', toggleAccordionClickHandler);
-//     });
+    accordionButtons.forEach(function (it) {
+      it.classList.remove('accordion__button--no-js');
+      it.tabIndex = '0';
+      it.addEventListener('click', toggleAccordionClickHandler);
+    });
 
-//     closeAllAccordion();
+    closeAllAccordion();
 
-//   }
-// })();
+  }
+})();
 
 'use strict';
 
@@ -198,9 +198,8 @@
 
 (function () {
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 4,
+    // slidesPerView: 4,
     loop: true,
-    spaceBetween: 30,
     speed: 1500,
 
     pagination: {
@@ -208,7 +207,7 @@
       clickable: true,
       renderBullet: function (index, className) {
         return '<li class=\'pagination__item '.concat(className, '\'>').concat(index + 1, '</li>');
-      }
+      },
     },
     lazy: {
       loadPrevNext: true
@@ -226,7 +225,7 @@
         pagination: {
           type: 'fraction',
           renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-            return '<li class=\''.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li~npm test class=\'').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
+            return '<li class=\'pagination__item pagination__item--active '.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'pagination__item ').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
           }
         }
       },
@@ -240,9 +239,7 @@
       1024: {
         slidesPerView: 4,
         slidesPerGroup: 4,
-        pagination: {
-          type: 'bullets'
-        }
+        spaceBetween: 30,
       }
     }
   });
