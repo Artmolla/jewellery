@@ -146,8 +146,6 @@
 }
 
 .header__open-menu-button {
-  @include button-reset;
-
   display: none;
 
   @media (max-width: $tablet-width) {

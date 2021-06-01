@@ -99,8 +99,6 @@
 }
 
 .new-arrivals__button {
-  @include button-reset;
-
   position: absolute;
   top: 39px;
   cursor: pointer;

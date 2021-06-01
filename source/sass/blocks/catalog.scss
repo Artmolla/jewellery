@@ -32,9 +32,20 @@
   }
 }
 
-.catalog__button {
-  @include button-reset;
+.catalog__open-modal-button {
+  display: none;
 
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 100%;
+    padding: 22px 22px 21px 22px;
+    text-align: center;
+    background-color: $brown;
+    color: $white;
+  }
+}
+
+.catalog__button {
   @media (max-width: $mobile-width) {
     display: none;
   }

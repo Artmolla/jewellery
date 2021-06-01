@@ -1,8 +1,8 @@
 'use strict';
 
 (function () {
-  if (document.querySelector('.user-area__log-in-button')) {
-    var openModalButton = document.querySelector('.user-area__log-in-button');
+  if (document.querySelector('.button--open-modal')) {
+    var openModalButtons = document.querySelectorAll('.button--open-modal');
 
     var disablePage = function () {
       document.querySelector('.page').classList.add('page--disabled');
@@ -29,7 +29,7 @@
     };
 
     var closeModalOutsideClickHandler = function (evt) {
-      if (evt.target.classList.contains('modal')) {
+      if (evt.target.classList.contains('modal--open')) {
         document.querySelector('.modal--open').classList.remove('modal--open');
         enablePage();
       }
@@ -42,6 +42,11 @@
       var buttonClose = evt.target;
       closeModal(modal, buttonClose);
       enablePage();
+    };
+
+    var focusOnEmail = function (element) {
+      var userEmailField = element.querySelector('input[name="email"]');
+      userEmailField.focus();
     };
 
     var trapFocus = function (element) {
@@ -74,19 +79,25 @@
     var openModalClickHandler = function (evt) {
       evt.preventDefault();
 
-      var modal = document.querySelector('.modal');
+      var modalName = evt.target.dataset.modal;
+      var modal = document.querySelector(modalName);
       modal.classList.add('modal--open');
-      disablePage();
-      var userEmailField = modal.querySelector('input[name="email"]');
-      var modalCloseButton = modal.querySelector('.modal__close-modal-button');
 
-      userEmailField.focus();
+      if (modal.querySelector('input[name="email"]')) {
+        focusOnEmail(modal);
+      }
+
+      disablePage();
+      var modalCloseButton = modal.querySelector('.button--close-modal');
+
       modalCloseButton.addEventListener('click', closeModalClickHandler);
       document.addEventListener('keydown', closeModalKeyPressHandler);
       document.addEventListener('click', closeModalOutsideClickHandler);
       trapFocus(modal);
     };
 
-    openModalButton.addEventListener('click', openModalClickHandler);
+    openModalButtons.forEach(function (button) {
+      button.addEventListener('click', openModalClickHandler);
+    });
   }
 })();

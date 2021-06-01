@@ -22,7 +22,7 @@
   <header class="header header--inner">
     <div class="container header__container">
       <div class="header__actions">
-        <button class="header__open-menu-button" type="button" aria-label="Toggle menu">
+        <button class="header__open-menu-button button" type="button" aria-label="Toggle menu">
           <svg width="25" height="18">
             <use xlink:href="img/sprite.svg#icon-menu"></use>
           </svg>
@@ -42,8 +42,8 @@
           </svg>
         </a>
         <ul class="user-area">
-          <li class="user-area__item user-area__item--log-in user-area__item">
-            <a class="user-area__log-in-button" href="login.html">Login</a>
+          <li class="user-area__item user-area__item--log-in">
+            <a class="button button--open-modal" href="login.html" data-modal=".modal--log-in">Login</a>
           </li>
           <li class="user-area__item user-area__bucket">
             <a href="#">
@@ -98,14 +98,19 @@
     <section class="catalog">
       <div class="container catalog__container">
         <h2 class="visually-hidden">Products catalog</h2>
+        <button class="catalog__open-modal-button button button--open-modal" type="button"
+          data-modal=".filter">Filter</button>
         <section class="filter">
           <h3 class="visually-hidden">Products filter</h3>
-          <button class="filter__button filter__button--modal" type="button">Filter</button>
           <form action="https://echo.htmlacademy.ru" method="GET">
+            <button class="filter__button filter__button--close button button--close-modal" type="button">
+              <span class="visually-hidden">Close modal window</span>
+            </button>
             <ul class="accordion accordion--filter">
               <li class="accordion__item--filter accordion__item accordion__item--open">
                 <fieldset>
-                  <button class="filter__button accordion__button accordion__button--filter accordion__button--no-js"
+                  <button
+                    class="filter__button accordion__button accordion__button--filter accordion__button--no-js button"
                     type="button">Product</button>
                   <ul class="filter__list accordion__body">
                     <li class="filter__item">
@@ -129,7 +134,8 @@
               </li>
               <li class="accordion__item accordion__item--filter">
                 <fieldset>
-                  <button class="filter__button accordion__button accordion__button--filter accordion__button--no-js"
+                  <button
+                    class="filter__button accordion__button accordion__button--filter accordion__button--no-js button"
                     type="button">Material</button>
                   <ul class="filter__list accordion__body">
                     <li class="filter__item">
@@ -145,7 +151,8 @@
               </li>
               <li class="accordion__item accordion__item--filter">
                 <fieldset>
-                  <button class="filter__button accordion__button accordion__button--filter accordion__button--no-js"
+                  <button
+                    class="filter__button accordion__button accordion__button--filter accordion__button--no-js button"
                     type="button">Collection</button>
                   <ul class="filter__list accordion__body">
                     <li class="filter__item">
@@ -161,7 +168,8 @@
               </li>
               <li class="accordion__item accordion__item--filter accordion__item accordion__item--open">
                 <fieldset>
-                  <button class="filter__button accordion__button accordion__button--filter accordion__button--no-js"
+                  <button
+                    class="filter__button accordion__button accordion__button--filter accordion__button--no-js button"
                     type="button">Price</button>
                   <div class="filter__price-range accordion__body">
                     <div class="filter__range-controls">
@@ -187,8 +195,8 @@
                 </fieldset>
               </li>
             </ul>
-            <button class="filter__button filter__button--submit" type="submit">Apply</button>
-            <button class="filter__button filter__button--clear" type="button">Clear All</button>
+            <button class="filter__button filter__button--submit button" type="submit">Apply</button>
+            <button class="filter__button filter__button--clear button" type="button">Clear All</button>
           </form>
         </section>
         <section class="products">
@@ -463,7 +471,7 @@
           </ul>
         </section>
         <div class="catalog__controls">
-          <button class="catalog__button catalog__button--previous" type="button">Previous</button>
+          <button class="catalog__button catalog__button--previous button" type="button">Previous</button>
           <ul class="pagination pagination--catalog">
             <li class="pagination__item pagination__item--active">
               <a href="#">1</a>
@@ -481,7 +489,7 @@
               <a href="#">5</a>
             </li>
           </ul>
-          <button class="catalog__button catalog__button--next" type="button">Next</button>
+          <button class="catalog__button catalog__button--next button" type="button">Next</button>
         </div>
       </div>
     </section>
@@ -495,7 +503,7 @@
           <div class="subscribe__input-container">
             <label class="visually-hidden" for="subscribe-email">Subscribe to our news letter</label>
             <input type="email" id="subscribe-email" placeholder="Your E-mail">
-            <button class="subscribe__submit-button" type="submit">
+            <button class="button" type="submit">
               Sign Up
               <svg width="30" height="11">
                 <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
@@ -567,9 +575,9 @@
     </div>
   </footer>
 
-  <div class="modal">
+  <div class="modal modal--log-in">
     <div class="modal__content">
-      <button class="modal__close-modal-button" type="button">
+      <button class="button button--close-modal" type="button">
         <span class="visually-hidden">Close modal window</span>
       </button>
       <div class="modal__log-in">
@@ -586,7 +594,7 @@
             <p><a href="#">Forgot your password?</a></p>
           </div>
           <div class="modal__input-container">
-            <button class="modal__submit-button" type="submit">Log In</button>
+            <button class="modal__submit-button button" type="submit">Log In</button>
             <p>Don’t have an account? <a href="#">Sign up</a></p>
           </div>
         </form>

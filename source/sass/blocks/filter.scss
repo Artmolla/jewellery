@@ -1,9 +1,14 @@
 .filter {
+  position: relative;
   color: $liquorice;
 
   form {
     @media (max-width: $tablet-width) {
-      display: none;
+      position: absolute;
+      left: -4px;
+      width: 427px;
+      padding: 11px 0 0 0;
+      box-shadow: 0 5px 32px $form-shadow;
     }
   }
 
@@ -35,6 +40,19 @@
     position: relative;
     padding-left: 24px;
   }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 27px 0;
+    z-index: 2;
+    overflow-y: scroll;
+    background-color: $white;
+  }
 }
 
 .filter__list {
@@ -50,12 +68,14 @@
 }
 
 .filter__button {
-  @include button-reset;
-
   width: 100%;
   padding: 21px 0;
   font-weight: 500;
   text-align: left;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .filter__button--submit {
@@ -69,19 +89,6 @@
 .filter__button--clear {
   text-align: center;
   border: 1px solid $brown;
-}
-
-.filter__button--modal {
-  display: none;
-
-  @media (max-width: $tablet-width) {
-    display: block;
-    width: 100%;
-    padding: 22px 22px 21px 22px;
-    text-align: center;
-    background-color: $brown;
-    color: $white;
-  }
 }
 
 .filter__range-scale {
@@ -139,6 +146,7 @@
 }
 
 .filter__price {
+  display: flex;
   position: absolute;
   top: 10px;
 }
@@ -151,4 +159,21 @@
 .filter__price--max {
   right: 22.5%;
   transform: translateX(50%);
+}
+
+.filter__button--close {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    top: -16px;
+    right: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: $liquorice;
+    background-image: url("../img/icons/icon-close-filter.svg");
+  }
 }

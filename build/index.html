@@ -21,7 +21,7 @@
   <header class="header">
     <div class="container header__container">
       <div class="header__actions">
-        <button class="header__open-menu-button" type="button" aria-label="Toggle menu">
+        <button class="header__open-menu-button button" type="button" aria-label="Toggle menu">
           <svg width="25" height="18">
             <use xlink:href="img/sprite.svg#icon-menu"></use>
           </svg>
@@ -42,7 +42,7 @@
         </a>
         <ul class="user-area">
           <li class="user-area__item user-area__item--log-in user-area__item">
-            <a class="user-area__log-in-button open-modal-button" href="login.html">Login</a>
+            <a class="button button--open-modal" href="login.html" data-modal=".modal--log-in">Login</a>
           </li>
           <li class="user-area__item user-area__bucket">
             <a href="#">
@@ -260,12 +260,12 @@
             </ul>
             <ul class="pagination swiper-pagination"></ul>
           </div>
-          <button class="new-arrivals__button new-arrivals__button--previous swiper-button-prev" type="button" aria-label="Previous slide">
+          <button class="new-arrivals__button new-arrivals__button--previous swiper-button-prev button" type="button" aria-label="Previous slide">
             <svg width="30" height="11">
               <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
             </svg>
           </button>
-          <button class="new-arrivals__button new-arrivals__button--next swiper-button-next" type="button" aria-label="Next slide">
+          <button class="new-arrivals__button new-arrivals__button--next swiper-button-next button" type="button" aria-label="Next slide">
             <svg width="30" height="11">
               <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
             </svg>
@@ -347,7 +347,8 @@
         <ul class="faq__list accordion">
           <li class="faq__item accordion__item accordion__item--open">
             <h3>
-              <button class="accordion__button accordion__button--no-js" type="button">What materials are the jewellery
+              <button class="accordion__button accordion__button--no-js button" type="button">What materials are the
+                jewellery
                 made of?</button>
             </h3>
             <div class="accordion__body">
@@ -359,7 +360,7 @@
           </li>
           <li class="faq__item accordion__item">
             <h3>
-              <button class="accordion__button accordion__button--no-js" type="button">
+              <button class="accordion__button accordion__button--no-js button" type="button">
                 Which countries do you deliver to?
               </button>
             </h3>
@@ -372,7 +373,7 @@
           </li>
           <li class="faq__item accordion__item">
             <h3>
-              <button class="accordion__button accordion__button--no-js" type="button">
+              <button class="accordion__button accordion__button--no-js button" type="button">
                 What are the payment methods?
               </button>
             </h3>
@@ -385,7 +386,7 @@
           </li>
           <li class="faq__item accordion__item">
             <h3>
-              <button class="accordion__button accordion__button--no-js" type="button">
+              <button class="accordion__button accordion__button--no-js button" type="button">
                 Can I return the jewellery if it didn’t fit me?
               </button>
             </h3>
@@ -522,7 +523,7 @@
           <div class="subscribe__input-container">
             <label class="visually-hidden" for="subscribe-email">Subscribe to our news letter</label>
             <input type="email" id="subscribe-email" placeholder="Your E-mail">
-            <button class="subscribe__submit-button" type="submit">
+            <button class="button" type="submit">
               Sign Up
               <svg width="30" height="11">
                 <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
@@ -596,7 +597,7 @@
 
   <div class="modal modal--log-in">
     <div class="modal__content">
-      <button class="modal__close-modal-button" type="button">
+      <button class="button button--close-modal" type="button">
         <span class="visually-hidden">Close modal window</span>
       </button>
       <div class="modal__log-in">
@@ -612,7 +613,7 @@
             <p><a href="#">Forgot your password?</a></p>
           </div>
           <div class="modal__input-container">
-            <button class="modal__submit-button" type="submit">Log In</button>
+            <button class="modal__submit-button button" type="submit">Log In</button>
             <p>Don’t have an account? <a href="#">Sign up</a></p>
           </div>
         </form>

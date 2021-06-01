@@ -17,6 +17,11 @@
   &:last-child {
     border-bottom: 1px solid $brown;
   }
+
+  @media (max-width: $tablet-width) {
+    border: none;
+    border-bottom: 1px solid $brown;
+  }
 }
 
 .accordion__item .accordion__body {
@@ -30,8 +35,6 @@
 }
 
 .accordion__button {
-  @include button-reset;
-
   position: relative;
   width: 100%;
   text-align: left;

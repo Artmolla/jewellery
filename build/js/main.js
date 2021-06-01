@@ -115,8 +115,8 @@
 'use strict';
 
 (function () {
-  if (document.querySelector('.user-area__log-in-button')) {
-    var openModalButton = document.querySelector('.user-area__log-in-button');
+  if (document.querySelector('.button--open-modal')) {
+    var openModalButtons = document.querySelectorAll('.button--open-modal');
 
     var disablePage = function () {
       document.querySelector('.page').classList.add('page--disabled');
@@ -143,7 +143,7 @@
     };
 
     var closeModalOutsideClickHandler = function (evt) {
-      if (evt.target.classList.contains('modal')) {
+      if (evt.target.classList.contains('modal--open')) {
         document.querySelector('.modal--open').classList.remove('modal--open');
         enablePage();
       }
@@ -156,6 +156,11 @@
       var buttonClose = evt.target;
       closeModal(modal, buttonClose);
       enablePage();
+    };
+
+    var focusOnEmail = function (element) {
+      var userEmailField = element.querySelector('input[name="email"]');
+      userEmailField.focus();
     };
 
     var trapFocus = function (element) {
@@ -188,20 +193,26 @@
     var openModalClickHandler = function (evt) {
       evt.preventDefault();
 
-      var modal = document.querySelector('.modal');
+      var modalName = evt.target.dataset.modal;
+      var modal = document.querySelector(modalName);
       modal.classList.add('modal--open');
-      disablePage();
-      var userEmailField = modal.querySelector('input[name="email"]');
-      var modalCloseButton = modal.querySelector('.modal__close-modal-button');
 
-      userEmailField.focus();
+      if (modal.querySelector('input[name="email"]')) {
+        focusOnEmail(modal);
+      }
+
+      disablePage();
+      var modalCloseButton = modal.querySelector('.button--close-modal');
+
       modalCloseButton.addEventListener('click', closeModalClickHandler);
       document.addEventListener('keydown', closeModalKeyPressHandler);
       document.addEventListener('click', closeModalOutsideClickHandler);
       trapFocus(modal);
     };
 
-    openModalButton.addEventListener('click', openModalClickHandler);
+    openModalButtons.forEach(function (button) {
+      button.addEventListener('click', openModalClickHandler);
+    });
   }
 })();
 
@@ -209,52 +220,54 @@
 'use strict';
 
 (function () {
-  var swiper = new Swiper('.swiper-container', {
-    // slidesPerView: 4,
-    loop: true,
-    speed: 1500,
+  if (document.querySelector('.slider')) {
+    var swiper = new Swiper('.swiper-container', {
+      // slidesPerView: 4,
+      loop: true,
+      speed: 1500,
 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<li class=\'pagination__item '.concat(className, '\'>').concat(index + 1, '</li>');
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<li class=\'pagination__item '.concat(className, '\'>').concat(index + 1, '</li>');
+        },
       },
-    },
-    lazy: {
-      loadPrevNext: true
-    },
+      lazy: {
+        loadPrevNext: true
+      },
 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
 
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        pagination: {
-          type: 'fraction',
-          renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-            return '<li class=\'pagination__item pagination__item--active '.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'pagination__item ').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            type: 'fraction',
+            renderFraction: function renderFraction(currentClass, totalClass, index, total) {
+              return '<li class=\'pagination__item pagination__item--active '.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'pagination__item ').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
+            }
           }
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            type: 'bullets'
+          }
+        },
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 30,
         }
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        pagination: {
-          type: 'bullets'
-        }
-      },
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 30,
       }
-    }
-  });
+    });
+  }
 })();
 /* eslint-enable */
 
