@@ -6,6 +6,10 @@
     text-align: left;
     color: $white;
     margin: 0;
+
+    @media (max-width: $mobile-width) {
+      padding: 0 20% 0 0;
+    }
   }
 
   p {
@@ -13,7 +17,7 @@
     color: $grey;
 
     @media (max-width: $mobile-width) {
-      margin: 10px 0 28px;
+      margin: 10px 20% 28px 0;
     }
   }
 
@@ -24,7 +28,7 @@
     font-size: 14px;
     line-height: 21px;
     border: none;
-    padding: 9px 0;
+    padding: 9px 0 8px 0;
     color: $grey;
     background-color: $transparent;
 
