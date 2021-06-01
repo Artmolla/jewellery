@@ -1,9 +1,49 @@
+.catalog {
+  margin-bottom: 70px;
+}
+
 .catalog__container {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 21.4% auto;
   gap: 50px;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
+    gap: 50px;
   }
+
+  @media (max-width: $mobile-width) {
+    gap: 40px;
+  }
+}
+
+.catalog__controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  grid-column: 2;
+
+  @media (max-width: $tablet-width) {
+    grid-column: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog__button {
+  @include button-reset;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.catalog__button--previous {
+  justify-self: start;
+}
+
+.catalog__button--next {
+  justify-self: end;
 }

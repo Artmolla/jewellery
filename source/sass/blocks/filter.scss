@@ -1,18 +1,18 @@
 .filter {
   color: $liquorice;
 
+  form {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
   fieldset {
     list-style: none;
     margin: 0;
     padding: 0 25px 0 25px;
     position: relative;
-    border: 1px solid $brown;
-    border-bottom: none;
-
-    &:last-of-type {
-      border-bottom: 1px solid $brown;
-      margin-bottom: 36px;
-    }
+    border: none;
   }
 
   input {
@@ -69,6 +69,19 @@
 .filter__button--clear {
   text-align: center;
   border: 1px solid $brown;
+}
+
+.filter__button--modal {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 100%;
+    padding: 22px 22px 21px 22px;
+    text-align: center;
+    background-color: $brown;
+    color: $white;
+  }
 }
 
 .filter__range-scale {

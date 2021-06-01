@@ -11,7 +11,7 @@
       var currentElement = element || null;
 
       accordionItems.forEach(function (it) {
-        if (it.classList.contains('accordion__item--open') && currentElement !== it) {
+        if (it.classList.contains('accordion__item--open') && currentElement !== it && !it.classList.contains('accordion__item--filter')) {
           it.classList.remove('accordion__item--open');
         }
       });
@@ -44,6 +44,23 @@
 
   }
 })();
+
+// 'use strict';
+
+// (function () {
+//   if (document.querySelector('.filter__button')) {
+//     var filterButtons = document.querySelectorAll('.filter__button');
+//     filterButtons.forEach(function (button) {
+//       if (button.classList.contains('filter__button--modal')) {
+
+//       } else if (button.classList.contains('filter__button--clear')) {
+
+//       } else if (button.classList.contains('filter__button--clear')) {
+
+//       }
+//     })
+//   }
+// })()
 
 'use strict';
 

@@ -98,81 +98,95 @@
     <section class="catalog">
       <div class="container catalog__container">
         <h2 class="visually-hidden">Products catalog</h2>
-        <section class="filter accordion">
+        <section class="filter">
           <h3 class="visually-hidden">Products filter</h3>
-          <button class="filter__open-model" type="button">Filter</button>
+          <button class="filter__button filter__button--modal" type="button">Filter</button>
           <form action="https://echo.htmlacademy.ru" method="GET">
-            <fieldset>
-              <button class="filter__button accordion__button" type="button">Product</button>
-              <ul class="filter__list accordion__body">
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces">
-                  <label for="necklaces">Necklaces</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="chokers" id="chokers">
-                  <label for="chokers">Chokers</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="rings" id="rings">
-                  <label for="rings">Rings</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="earrings" id="earrings">
-                  <label for="earrings">Earrings</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset>
-              <button class="filter__button accordion__button" type="button">Material</button>
-              <ul class="filter__list accordion__body">
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="gold" id="gold">
-                  <label for="gold">Gold</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="silver" id="silver">
-                  <label for="silver">Silver</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset>
-              <button class="filter__button accordion__button" type="button">Collection</button>
-              <ul class="filter__list accordion__body">
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="flamingo" id="flamingo">
-                  <label for="flamingo">Pink flamingo</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
-                  <label for="dreams">Dreams</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset>
-              <button class="filter__button accordion__button" type="button">Price</button>
-              <div class="filter__price-range accordion__body">
-                <div class="filter__range-controls">
-                  <div class="filter__range-scale">
-                    <div class="filter__range-bar"></div>
-                    <div class="filter__range-toggle filter__range-toggle--min" tabindex="0"></div>
-                    <div class="filter__range-toggle filter__range-toggle--max" tabindex="0"></div>
+            <ul class="accordion accordion--filter">
+              <li class="accordion__item--filter accordion__item accordion__item--open">
+                <fieldset>
+                  <button class="filter__button accordion__button accordion__button--filter accordion__button--no-js"
+                    type="button">Product</button>
+                  <ul class="filter__list accordion__body">
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces">
+                      <label for="necklaces">Necklaces</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="chokers" id="chokers">
+                      <label for="chokers">Chokers</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="rings" id="rings">
+                      <label for="rings">Rings</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="earrings" id="earrings">
+                      <label for="earrings">Earrings</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </li>
+              <li class="accordion__item accordion__item--filter">
+                <fieldset>
+                  <button class="filter__button accordion__button accordion__button--filter accordion__button--no-js"
+                    type="button">Material</button>
+                  <ul class="filter__list accordion__body">
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="gold" id="gold">
+                      <label for="gold">Gold</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="silver" id="silver">
+                      <label for="silver">Silver</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </li>
+              <li class="accordion__item accordion__item--filter">
+                <fieldset>
+                  <button class="filter__button accordion__button accordion__button--filter accordion__button--no-js"
+                    type="button">Collection</button>
+                  <ul class="filter__list accordion__body">
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="flamingo" id="flamingo">
+                      <label for="flamingo">Pink flamingo</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
+                      <label for="dreams">Dreams</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </li>
+              <li class="accordion__item accordion__item--filter accordion__item accordion__item--open">
+                <fieldset>
+                  <button class="filter__button accordion__button accordion__button--filter accordion__button--no-js"
+                    type="button">Price</button>
+                  <div class="filter__price-range accordion__body">
+                    <div class="filter__range-controls">
+                      <div class="filter__range-scale">
+                        <div class="filter__range-bar"></div>
+                        <div class="filter__range-toggle filter__range-toggle--min" tabindex="0"></div>
+                        <div class="filter__range-toggle filter__range-toggle--max" tabindex="0"></div>
+                      </div>
+                    </div>
+                    <div class="filter__price-controls">
+                      <div class="filter__price filter__price--min">
+                        <span>$</span>
+                        <label class="visually-hidden" for="min-price">Min price</label>
+                        <input type="number" name="min" id="min-price" value="55" min="0" max="200">
+                      </div>
+                      <div class="filter__price filter__price--max">
+                        <span>$</span>
+                        <label class="visually-hidden" for="max-price">Max price</label>
+                        <input type="number" name="max" id="max-price" value="155" min="0" max="200">
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="filter__price-controls">
-                  <div class="filter__price filter__price--min">
-                    <span>$</span>
-                    <label class="visually-hidden" for="min-price">Min price</label>
-                    <input type="number" name="min" id="min-price" value="55" min="0" max="200">
-                  </div>
-                  <div class="filter__price filter__price--max">
-                    <span>$</span>
-                    <label class="visually-hidden" for="max-price">Max price</label>
-                    <input type="number" name="max" id="max-price" value="155" min="0" max="200">
-                  </div>
-                </div>
-              </div>
-            </fieldset>
+                </fieldset>
+              </li>
+            </ul>
             <button class="filter__button filter__button--submit" type="submit">Apply</button>
             <button class="filter__button filter__button--clear" type="button">Clear All</button>
           </form>
@@ -448,6 +462,27 @@
             </li>
           </ul>
         </section>
+        <div class="catalog__controls">
+          <button class="catalog__button catalog__button--previous" type="button">Previous</button>
+          <ul class="pagination pagination--catalog">
+            <li class="pagination__item pagination__item--active">
+              <a href="#">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#">3</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#">4</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#">5</a>
+            </li>
+          </ul>
+          <button class="catalog__button catalog__button--next" type="button">Next</button>
+        </div>
       </div>
     </section>
   </main>

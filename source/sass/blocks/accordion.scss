@@ -2,8 +2,21 @@
   @include list-reset;
 }
 
+.accordion--filter {
+  margin-bottom: 36px;
+}
+
 .accordion__item {
   position: relative;
+}
+
+.accordion__item--filter {
+  border: 1px solid $brown;
+  border-bottom: none;
+
+  &:last-child {
+    border-bottom: 1px solid $brown;
+  }
 }
 
 .accordion__item .accordion__body {
@@ -42,6 +55,13 @@
       height: 12px;
       background-size: 23px 15px;
     }
+  }
+}
+
+.accordion__button--filter {
+  &::after {
+    right: -2px;
+    top: 28px;
   }
 }
 
