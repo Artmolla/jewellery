@@ -23,6 +23,14 @@
 .pagination__item {
   margin-right: 12px;
   cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pagination__item--catalog {
+  margin-right: 23px;
 }
 
 .pagination__item--active {

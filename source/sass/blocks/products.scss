@@ -28,10 +28,6 @@
     line-height: 18px;
   }
 
-  @media (max-width: $tablet-width) {
-    gap: 35px 30px;
-  }
-
   @media (max-width: $mobile-width) {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 30px;

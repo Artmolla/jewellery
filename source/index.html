@@ -100,9 +100,9 @@
         <div class="slider">
           <h2>New In</h2>
           <a class="page__link" href="catalog.html">Shop Now</a>
-          <div class="new-arrivals__slider swiper-container">
-            <ul class="new-arrivals__list swiper-wrapper">
-              <li class="new-arrivals__item swiper-slide">
+          <div class="slider__container swiper-container">
+            <ul class="new-arrivals__list slider__wrapper swiper-wrapper">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -118,7 +118,7 @@
                   <span>$ 145</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -134,7 +134,7 @@
                   <span>$ 115</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -150,7 +150,7 @@
                   <span>$ 215</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -165,7 +165,7 @@
                   <span>$ 95</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -181,7 +181,7 @@
                   <span>$ 115</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -197,7 +197,7 @@
                   <span>$ 145</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -212,7 +212,7 @@
                   <span>$ 95</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -227,7 +227,7 @@
                   <span>$ 95</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -243,7 +243,7 @@
                   <span>$ 145</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -259,7 +259,7 @@
                   <span>$ 115</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -275,7 +275,7 @@
                   <span>$ 215</span>
                 </a>
               </li>
-              <li class="new-arrivals__item swiper-slide">
+              <li class="new-arrivals__item slider__slide swiper-slide">
                 <a href="#">
                   <div class="new-arrivals__image-container">
                     <picture>
@@ -293,13 +293,13 @@
             </ul>
             <ul class="pagination swiper-pagination"></ul>
           </div>
-          <button class="new-arrivals__button new-arrivals__button--previous swiper-button-prev button" type="button"
+          <button class="slider__button slider__button--previous swiper-button-prev button" type="button"
             aria-label="Previous slide">
             <svg width="30" height="11">
               <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
             </svg>
           </button>
-          <button class="new-arrivals__button new-arrivals__button--next swiper-button-next button" type="button"
+          <button class="slider__button slider__button--next swiper-button-next button" type="button"
             aria-label="Next slide">
             <svg width="30" height="11">
               <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
@@ -398,21 +398,8 @@
         <ul class="faq__list accordion">
           <li class="faq__item accordion__item accordion__item--open">
             <h3>
-              <button class="accordion__button accordion__button--no-js button" type="button">What materials are the
-                jewellery
-                made of?</button>
-            </h3>
-            <div class="accordion__body">
-              <p>
-                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
-                semiprecious stones and crystals.
-              </p>
-            </div>
-          </li>
-          <li class="faq__item accordion__item">
-            <h3>
               <button class="accordion__button accordion__button--no-js button" type="button">
-                Which countries do you deliver to?
+                What materials are the&nbsp;jewellery made of?
               </button>
             </h3>
             <div class="accordion__body">
@@ -425,7 +412,7 @@
           <li class="faq__item accordion__item">
             <h3>
               <button class="accordion__button accordion__button--no-js button" type="button">
-                What are the payment methods?
+                Which countries do&nbsp;you&nbsp;deliver to?
               </button>
             </h3>
             <div class="accordion__body">
@@ -438,7 +425,20 @@
           <li class="faq__item accordion__item">
             <h3>
               <button class="accordion__button accordion__button--no-js button" type="button">
-                Can I return the jewellery if it didn’t fit me?
+                What are the payment&nbsp;methods?
+              </button>
+            </h3>
+            <div class="accordion__body">
+              <p>
+                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </p>
+            </div>
+          </li>
+          <li class="faq__item accordion__item">
+            <h3>
+              <button class="accordion__button accordion__button--no-js button" type="button">
+                Can I return the jewellery&nbsp;if it didn’t fit me?
               </button>
             </h3>
             <div class="accordion__body">

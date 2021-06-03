@@ -1,3 +1,43 @@
 .slider {
   position: relative;
 }
+
+.slider__container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slider__wrapper {
+  @include list-reset;
+
+  display: flex;
+  width: 100%;
+}
+
+.slider__slide {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  flex-shrink: 0;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 39px;
+  cursor: pointer;
+  color: $brown;
+}
+
+.slider__button--previous {
+  left: 0;
+}
+
+.slider__button--next {
+  right: 0;
+}

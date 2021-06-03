@@ -1,6 +1,6 @@
 .subscribe {
   flex-basis: 43%;
-  margin: 0 88px 0 0;
+  margin: 0 7.5% 0 0;
 
   h2 {
     text-align: left;
@@ -21,26 +21,14 @@
     }
   }
 
-  input {
-    width: 78%;
-    font-family: $main-font;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    border: none;
-    padding: 9px 0 8px 0;
-    color: $grey;
-    background-color: $transparent;
-
-    @media (max-width: $mobile-width) {
-      width: 60%;
-    }
-  }
-
   svg {
     width: 29px;
     height: 9px;
     margin: 0 0 0 11px;
+  }
+
+  @media (max-width: 1210px) {
+    margin: 0 3% 0 0;
   }
 
   @media (max-width: $tablet-width) {
@@ -54,6 +42,22 @@
   flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid $white;
+
+  input {
+    width: 75%;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    border: none;
+    padding: 9px 0 8px 0;
+    color: $grey;
+    background-color: $transparent;
+
+    @media (max-width: $mobile-width) {
+      width: 60%;
+    }
+  }
 
   @media (max-width: $tablet-width) {
     width: 83%;

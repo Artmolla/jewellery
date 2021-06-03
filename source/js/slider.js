@@ -4,7 +4,9 @@
 (function () {
   if (document.querySelector('.slider')) {
     var swiper = new Swiper('.swiper-container', {
-      // slidesPerView: 4,
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 30,
       loop: true,
       speed: 1500,
 
@@ -45,7 +47,6 @@
         1024: {
           slidesPerView: 4,
           slidesPerGroup: 4,
-          spaceBetween: 30,
         }
       }
     });

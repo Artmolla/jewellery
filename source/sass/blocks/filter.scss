@@ -64,37 +64,24 @@
 .filter__list {
   @include list-reset;
 
-  padding: 0 10px 12px 10px;
+  padding: 0 10px 15px 10px;
   font-size: 14px;
   line-height: 18px;
 }
 
 .filter__item {
-  margin: 0 0 13px 0;
+  margin: 0 0 12px 0;
 }
 
 .filter__button {
   width: 100%;
-  padding: 21px 0;
+  padding: 22px 0;
   font-weight: 500;
   text-align: left;
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
   }
-}
-
-.filter__button--submit {
-  text-align: center;
-  margin-bottom: 25px;
-  border: 1px solid $brown;
-  background-color: $brown;
-  color: $white;
-}
-
-.filter__button--clear {
-  text-align: center;
-  border: 1px solid $brown;
 }
 
 .filter__range-scale {
@@ -123,12 +110,12 @@
 }
 
 .filter__range-toggle--min {
-  left: 27.5%;
+  left: 25.5%;
   transform: translate(-50%, -50%);
 }
 
 .filter__range-toggle--max {
-  right: 22.5%;
+  right: 21.5%;
 }
 
 .filter__price-controls {
@@ -163,13 +150,13 @@
 }
 
 .filter__price--min {
-  left: 27.5%;
-  transform: translateX(-30%);
+  left: 25.5%;
+  transform: translateX(-25%);
 }
 
 .filter__price--max {
-  right: 22.5%;
-  transform: translateX(80%);
+  right: 21.5%;
+  transform: translateX(75%);
 }
 
 .filter__button--close {

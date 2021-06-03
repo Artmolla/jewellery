@@ -34,7 +34,7 @@
 
 .faq__item {
   border-bottom: 1px solid $brown;
-  padding: 41px 43px;
+  padding: 43px;
 
   h3 {
     font-style: normal;
@@ -52,19 +52,19 @@
   p {
     padding: 0 40% 0 0.7%;
     line-height: 21px;
-    margin: 6px 0 0 0;
+    margin: 7px 0 0 0;
 
     @media (max-width: $tablet-width) {
       padding: 0;
-      margin: 24px 0 0 0;
-      letter-spacing: -0.005em;
+      margin: 23px 0 0 0;
+      letter-spacing: -0.006em;
     }
 
     @media (max-width: $mobile-width) {
       font-size: 14px;
       line-height: 20px;
-      letter-spacing: 0.03em;
-      padding: 0 20px 0 0;
+      letter-spacing: -0.003em;
+      padding: 0 35px 0 0;
       margin: 12px 0 0 0;
     }
   }
@@ -74,10 +74,10 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 42px 50px;
+    padding: 44px 50px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 12px 23px;
+    padding: 17px 23px;
   }
 }

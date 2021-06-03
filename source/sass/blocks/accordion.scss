@@ -38,6 +38,7 @@
   position: relative;
   width: 100%;
   text-align: left;
+  line-height: 23px;
   letter-spacing: 0.005em;
 
   &::after {
@@ -52,8 +53,8 @@
     background-position: center;
 
     @media (max-width: $tablet-width) {
-      top: 8px;
-      right: 6px;
+      top: 5px;
+      right: 0;
       width: 23px;
       height: 12px;
       background-size: 23px 15px;
@@ -61,7 +62,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 0 24% 0 0;
+    padding: 0 14% 0 0;
   }
 }
 
