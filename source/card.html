@@ -89,17 +89,13 @@
   </header>
   <main>
     <section class="card">
-      <h1 class="visually-hidden">card card</h1>
       <div class="container card__container">
+        <h1 class="visually-hidden">card card</h1>
         <div class="card__slider">
           <ul class="card__thumbs-buttons">
             <li class="card__thumb">
               <button class="button" type="button">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/products/card/thumbnail-gold-necklace-for-women-mobile.webp 1x, img/products/card/thumbnail-gold-necklace-for-women-mobile@2x.webp 2x">
-                  <source media="(max-width: 767px)"
-                    srcset="img/products/card/thumbnail-gold-necklace-for-women-mobile.jpg 1x, img/products/card/thumbnail-gold-necklace-for-women-mobile@2x.jpg 2x">
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/products/card/thumbnail-gold-necklace-for-women-tablet.webp 1x, img/products/card/thumbnail-gold-necklace-for-women-tablet@2x.webp 2x">
                   <source media="(max-width: 1023px)"
@@ -116,10 +112,6 @@
             <li class="card__thumb">
               <button class="button" type="button">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/products/card/thumbnail-pretty-gold-necklace-mobile.webp 1x, img/products/card/thumbnail-pretty-gold-necklace-mobile@2x.webp 2x">
-                  <source media="(max-width: 767px)"
-                    srcset="img/products/card/thumbnail-pretty-gold-necklace-mobile.jpg 1x, img/products/card/thumbnail-pretty-gold-necklace-mobile@2x.jpg 2x">
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/products/card/thumbnail-pretty-gold-necklace-tablet.webp 1x, img/products/card/thumbnail-pretty-gold-necklace-tablet@2x.webp 2x">
                   <source media="(max-width: 1023px)"
@@ -136,10 +128,6 @@
             <li class="card__thumb">
               <button class="button" type="button">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
-                    srcset="img/products/card/thumbnail-womens-necklace-set-mobile.webp 1x, img/products/card/thumbnail-womens-necklace-set-mobile@2x.webp 2x">
-                  <source media="(max-width: 767px)"
-                    srcset="img/products/card/thumbnail-womens-necklace-set-mobile.jpg 1x, img/products/card/thumbnail-womens-necklace-set-mobile@2x.jpg 2x">
                   <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/products/card/thumbnail-womens-necklace-set-tablet.webp 1x, img/products/card/thumbnail-womens-necklace-set-tablet@2x.webp 2x">
                   <source media="(max-width: 1023px)"
@@ -199,7 +187,8 @@
               <dd>18” / 20”</dd>
             </dl>
           </div>
-          <a class="card__add-button button button--open-modal" href="card.html" data-modal=".modal--added">Add to card</a>
+          <a class="card__add-button button button--open-modal" href="card.html" data-modal=".modal--added">Add to
+            card</a>
           <ul class="card__advantages">
             <li class="card__advantage">
               14 Day Returns
@@ -545,22 +534,27 @@
       <ul class="added__items">
         <li class="added__item">
           <div class="added__image-container">
-            <img src="#" alt="#">
+            <picture>
+              <source type="image/webp"
+                srcset="img/products/card/popup-necklace-detail.webp 1x, img/products/card/popup-necklace-detail@2x.webp 2x">
+              <img src="img/products/card/popup-necklace-detail.jpg"
+                srcset="img/products/card/popup-necklace-detail@2x.jpg" alt="Necklace" width="84" height="79">
+            </picture>
           </div>
           <div class="added__item-info">
-            <h2>Gold Necklace</h2>
+            <h3>Gold Necklace</h3>
             <span>$ 115</span>
           </div>
           <div class="added__item-count">
-            <button type="button">
+            <button class="button" type="button">
               <svg width="14" height="14">
                 <use xlink:href="img/sprite.svg#icon-plus"></use>
               </svg>
             </button>
             <span>1</span>
-            <button type="button">
+            <button class="button" type="button">
               <svg width="14" height="14">
-                <use xlink:href="img/sprite.svg#icon-plus"></use>
+                <use xlink:href="img/sprite.svg#icon-minus"></use>
               </svg>
             </button>
           </div>
@@ -571,8 +565,8 @@
         <p>Card subtotal: <span>$ 115</span></p>
       </div>
       <div class="added__buttons">
-        <a href="catalog.html">Continue shopping</a>
-        <a href="card.html">Checkout</a>
+        <a class="added__button" href="catalog.html">Continue shopping</a>
+        <a class="added__button added__button--checkout" href="card.html">Checkout</a>
       </div>
     </div>
   </div>

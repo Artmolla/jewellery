@@ -5,10 +5,16 @@
   form {
     @media (max-width: $tablet-width) {
       position: absolute;
-      left: -4px;
-      width: 427px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 55.6%;
       padding: 11px 0 0 0;
       box-shadow: 0 5px 32px $form-shadow;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 90%;
     }
   }
 
@@ -149,16 +155,21 @@
   display: flex;
   position: absolute;
   top: 10px;
+
+  input {
+    width: 50px;
+    appearance: textfield;
+  }
 }
 
 .filter__price--min {
   left: 27.5%;
-  transform: translateX(-50%);
+  transform: translateX(-30%);
 }
 
 .filter__price--max {
   right: 22.5%;
-  transform: translateX(50%);
+  transform: translateX(80%);
 }
 
 .filter__button--close {
