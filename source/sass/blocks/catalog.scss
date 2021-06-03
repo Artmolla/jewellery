@@ -1,5 +1,11 @@
 .catalog {
-  margin-bottom: 70px;
+  margin-bottom: 73px;
+  padding-top: 20px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 40px;
+    margin-bottom: 62px;
+  }
 }
 
 .catalog__container {
@@ -13,7 +19,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    gap: 40px;
+    gap: 20px;
   }
 }
 
