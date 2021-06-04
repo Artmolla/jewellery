@@ -32,6 +32,10 @@
   top: 39px;
   cursor: pointer;
   color: $brown;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .slider__button--previous {

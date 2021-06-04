@@ -24,6 +24,7 @@
 
 .header--menu-open {
   @media (max-width: $tablet-width) {
+    padding: 20px 0 55px 0;
     background-color: $brown;
     color: $white;
   }

@@ -6,6 +6,7 @@
 
   h2 {
     margin-bottom: 25px;
+    letter-spacing: -0.003em;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 17px;
@@ -21,6 +22,26 @@
   }
 }
 
+.new-arrivals--inner {
+  padding: 0 0 123px 0;
+
+  h2 {
+    margin-bottom: 16px;
+
+    @media (max-width: $mobile-width) {
+      margin: 32px 0 16px 0;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 0 72px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 0 60px 0;
+  }
+}
+
 .new-arrivals__list {
   @include list-reset;
 
@@ -32,6 +53,18 @@
 
   @media (max-width: $mobile-width) {
     padding: 44px 0 0 0;
+  }
+}
+
+.new-arrivals__list--inner {
+  padding: 63px 0 0 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 55px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 45px 0 0;
   }
 }
 
