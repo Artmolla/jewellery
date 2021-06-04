@@ -26,25 +26,24 @@
     border: none;
   }
 
-  input {
-    & + label::before {
-      position: absolute;
-      content: "";
-      left: -1px;
-      top: 3px;
-      width: 13px;
-      height: 13px;
-      border: 1px solid $brown;
-    }
+  input + label::before {
+    position: absolute;
+    content: "";
+    left: -1px;
+    top: 3px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid $brown;
+  }
 
-    &:checked + label::before {
-      background-color: $brown;
-    }
+  input:checked + label::before {
+    background-color: $brown;
   }
 
   label {
     position: relative;
     padding-left: 24px;
+    cursor: pointer;
   }
 
   @media (max-width: $tablet-width) {

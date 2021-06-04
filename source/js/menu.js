@@ -21,8 +21,6 @@
       if (introSection) {
         introSection.classList.add('header__intro--menu-open');
       }
-
-      header.addEventListener('keydown', keyPressHandler);
     };
 
     var menuClose = function () {
@@ -33,16 +31,6 @@
 
       if (introSection) {
         introSection.classList.remove('header__intro--menu-open');
-      }
-
-      header.removeEventListener('keydown', keyPressHandler);
-    };
-
-    var keyPressHandler = function (evt) {
-      if (evt.key === 'Escape') {
-        evt.preventDefault();
-
-        menuClose();
       }
     };
 
