@@ -52,6 +52,10 @@
 }
 
 .catalog__button {
+  &:hover {
+    color: $brown;
+  }
+
   @media (max-width: $mobile-width) {
     display: none;
   }

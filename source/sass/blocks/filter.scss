@@ -9,8 +9,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 55.6%;
+      max-height: 90%;
       padding: 11px 0 0 0;
       box-shadow: 0 5px 32px $form-shadow;
+      animation: slideIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
 
     @media (max-width: $mobile-width) {
@@ -38,6 +40,14 @@
 
   input:checked + label::before {
     background-color: $brown;
+  }
+
+  input:hover + label {
+    color: $brown;
+  }
+
+  input:active + label {
+    opacity: 0.4;
   }
 
   label {

@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 50px 0 0 0;
+  transition: color ease-in-out 0.2s;
   color: $grey;
 
   @media (max-width: $tablet-width) {
@@ -23,6 +24,15 @@
 .pagination__item {
   margin-right: 12px;
   cursor: pointer;
+  transition: color ease-in-out 0.2s;
+
+  &:hover {
+    color: $brown;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 
   &:last-child {
     margin-right: 0;

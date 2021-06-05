@@ -5,6 +5,7 @@
   padding: 20px 35px 55px 35px;
   background-color: $white;
   background-image: none;
+  color: $liquorice;
 
   h2 {
     font-size: 26px;
@@ -88,6 +89,18 @@
   }
 }
 
+.added__button__continue {
+  &:hover {
+    background-color: $brown;
+    color: $white;
+  }
+}
+
 .added__button--checkout {
   background-color: $brown;
+
+  &:hover {
+    background-color: $white;
+    color: $brown;
+  }
 }

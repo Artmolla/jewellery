@@ -1,0 +1,23 @@
+@keyframes slideIn {
+  0% {
+    transform: translate(-500%, -50%);
+  }
+
+  70% {
+    transform: translate(-40%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

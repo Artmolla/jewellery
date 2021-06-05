@@ -13,7 +13,6 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   box-sizing: border-box;
   width: 430px;
   font-size: 14px;
@@ -25,6 +24,8 @@
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
+  transform: translateX(-500%);
+  animation: slideIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 
   h2 {
     @media (max-width: $mobile-width) {
@@ -56,15 +57,24 @@
 
   input {
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid $liquorice;
     width: 100%;
-    padding: 10px 0 8px 0;
+    padding: 10px 5px 8px 5px;
     font-family: $main-font;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: $grey;
+    color: $black;
     background-color: $transparent;
+
+    &::placeholder {
+      color: $grey;
+    }
+
+    &:hover {
+      outline: 1px solid $black;
+    }
   }
 
   p {
@@ -73,6 +83,14 @@
 
   a {
     color: $liquorice;
+
+    &:hover {
+      color: $brown;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
   }
 }
 
@@ -95,6 +113,12 @@
   margin: 21px 0 0 0;
   color: $white;
   background-color: $brown;
+
+  &:hover {
+    background-color: $desert-storm;
+    box-shadow: 0 0 0 1px $brown;
+    color: $brown;
+  }
 }
 
 .modal--open {

@@ -20,9 +20,18 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: $grey;
+    color: $liquorice;
     background: none;
     border: none;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      box-shadow: 0 0 0 1px $brown;
+
+      @media (max-width: $tablet-width) {
+        box-shadow: 0 0 0 1px $white;
+      }
+    }
 
     &::placeholder {
       @media (max-width: $tablet-width) {

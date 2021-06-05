@@ -103,6 +103,16 @@
 
   a {
     color: $white;
+
+    &:hover {
+      background-color: $white;
+      box-shadow: 0 0 0 1px $brown;
+      color: $brown;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
   }
 
   span {
@@ -140,6 +150,10 @@
 .card__tab-button {
   padding: 10px 0 10px 0;
   margin: 0 38px 0 0;
+
+  &:hover {
+    color: $brown;
+  }
 }
 
 .card__add-button {

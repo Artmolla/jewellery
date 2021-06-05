@@ -27,6 +27,7 @@
     padding: 20px 0 55px 0;
     background-color: $brown;
     color: $white;
+    animation: fadeIn ease-out 0.4s;
   }
 }
 
@@ -169,6 +170,10 @@
 
 .header__open-menu-button {
   display: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @media (max-width: $tablet-width) {
     display: initial;

@@ -4,6 +4,16 @@
   color: $white;
   background-color: $black;
 
+  a {
+    &:hover {
+      color: $brown;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
   @media (max-width: $tablet-width) {
     padding: 50px 0 30px;
   }

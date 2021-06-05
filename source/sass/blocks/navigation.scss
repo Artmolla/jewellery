@@ -45,6 +45,21 @@
     margin: 0;
   }
 
+  a {
+    &:hover {
+      color: $brown;
+
+      @media (max-width: $tablet-width) {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
   @media (max-width: $tablet-width) {
     margin-bottom: 21px;
   }

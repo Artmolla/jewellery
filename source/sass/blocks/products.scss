@@ -33,3 +33,17 @@
     gap: 25px 30px;
   }
 }
+
+.products__item {
+  a {
+    display: block;
+
+    &:hover {
+      color: $brown;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+}
