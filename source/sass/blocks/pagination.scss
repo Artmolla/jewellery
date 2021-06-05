@@ -40,7 +40,11 @@
 }
 
 .pagination__item--catalog {
-  margin-right: 23px;
+  margin-right: 13px;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 23px;
+  }
 }
 
 .pagination__item--active {

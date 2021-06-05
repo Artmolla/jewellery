@@ -35,6 +35,12 @@
     opacity: 0.4;
   }
 
+  @media (max-width: $tablet-width) {
+    top: 13px;
+    right: 13px;
+    background-size: 20px;
+  }
+
   @media (max-width: $mobile-width) {
     top: 3px;
     right: 5px;

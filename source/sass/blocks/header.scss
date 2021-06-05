@@ -24,10 +24,14 @@
 
 .header--menu-open {
   @media (max-width: $tablet-width) {
-    padding: 20px 0 55px 0;
+    padding: 30px 0 55px 0;
     background-color: $brown;
     color: $white;
     animation: fadeIn ease-out 0.4s;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 0 55px 0;
   }
 }
 
