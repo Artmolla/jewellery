@@ -1,2 +1,3 @@
 /build/**
-/source/js/vendor**
+/source/js/vendor.js
+/source/js/slider.js

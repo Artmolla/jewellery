@@ -1,4 +1,3 @@
-/* eslint-disable */
 'use strict';
 
 (function () {
@@ -52,4 +51,3 @@
     });
   }
 })();
-/* eslint-enable */

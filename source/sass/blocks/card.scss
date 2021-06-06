@@ -54,14 +54,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  @media (max-width: $tablet-width) {
-    margin-right: 4.4%;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 }
 
 .card__images {
