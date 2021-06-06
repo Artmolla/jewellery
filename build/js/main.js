@@ -93,6 +93,8 @@
       introSection.classList.remove('header__intro--menu-open');
     }
 
+    header.classList.remove('header--menu-no-js');
+
     menuButton.addEventListener('click', function () {
       if (header.classList.contains('header--menu-open')) {
         menuClose();

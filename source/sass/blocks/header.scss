@@ -39,6 +39,13 @@
   }
 }
 
+.header--menu-no-js {
+  @media (max-width: $tablet-width) {
+    position: relative;
+    margin-bottom: 10px;
+  }
+}
+
 .header__container {
   position: relative;
 }
