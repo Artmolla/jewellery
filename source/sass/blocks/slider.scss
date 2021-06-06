@@ -35,6 +35,10 @@
   &:nth-child(4n) {
     margin-right: 0;
   }
+
+  @media (max-width: $tablet-width) {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .slider__button {
