@@ -8,12 +8,15 @@
 
 .card__container {
   display: grid;
-  grid-template-columns: 51.18% 40.06%;
+  grid-template-columns: 599px 40.06%;
   gap: 8.66%;
+
+  @media (max-width: 1050px) {
+    gap: 5.86%;
+  }
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 47.08% 46.76%;
-    gap: 5.86%;
   }
 
   @media (max-width: $mobile-width) {
