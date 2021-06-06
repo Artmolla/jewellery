@@ -68,3 +68,9 @@
 .catalog__button--next {
   justify-self: end;
 }
+
+.catalog__no-js-filter-button {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}

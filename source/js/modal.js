@@ -12,6 +12,14 @@
       document.querySelector('.page').classList.remove('page--disabled');
     };
 
+    var activateFilterButtons = function () {
+      if (document.querySelector('.catalog__no-js-filter-button')) {
+        openModalButtons.forEach(function (button) {
+          button.classList.remove('catalog__no-js-filter-button');
+        });
+      }
+    };
+
     var closeModal = function (modal, buttonClose) {
       modal.classList.remove('modal--open');
       buttonClose.removeEventListener('click', closeModalClickHandler);
@@ -95,6 +103,8 @@
       document.addEventListener('click', closeModalOutsideClickHandler);
       trapFocus(modal);
     };
+
+    activateFilterButtons();
 
     openModalButtons.forEach(function (button) {
       button.addEventListener('click', openModalClickHandler);
