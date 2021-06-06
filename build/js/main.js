@@ -255,6 +255,45 @@
         }
       }
     });
+
+    if (document.querySelector('.slider__container--thumbs') && document.querySelector('.slider__container--slides')) {
+      var thumbsPagination = new Swiper(".slider__container--thumbs", {
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          768: {
+            direction: 'horizontal',
+            spaceBetween: 'auto',
+          },
+          1024: {
+            direction: 'vertical',
+            spaceBetween: 30,
+          }
+        }
+      });
+    }
+
+    var slides = new Swiper(".slider__container--slides", {
+      slidesPerView: 1,
+
+      thumbs: {
+        swiper: thumbsPagination,
+      },
+
+      breakpoints: {
+        320: {
+          pagination: {
+            el: '.card__pagination',
+            type: 'fraction',
+            renderFraction: function renderFraction(currentClass, totalClass, index, total) {
+              return '<li class=\'pagination__item pagination__item--card pagination__item--active '.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'pagination__item ').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
+            }
+          }
+        },
+      }
+    });
   }
 })();
 

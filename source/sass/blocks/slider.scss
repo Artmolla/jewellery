@@ -10,6 +10,16 @@
   z-index: 1;
 }
 
+.slider__container--thumbs {
+  @media (max-width: $tablet-width) {
+    grid-row: 2;
+  }
+}
+
+.slider__container--slides {
+  position: relative;
+}
+
 .slider__wrapper {
   @include list-reset;
 

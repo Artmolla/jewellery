@@ -1,5 +1,5 @@
 .card {
-  padding: 20px 0 80px 0;
+  padding: 20px 0 63px 0;
 
   @media (max-width: $tablet-width) {
     padding: 0 0 11px 0;
@@ -18,7 +18,7 @@
 
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
-    gap: 51px;
+    gap: 37px;
   }
 }
 
@@ -40,7 +40,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    grid-row: 2;
   }
 
   @media (max-width: $mobile-width) {
@@ -58,6 +57,28 @@
 
 .card__images {
   @include list-reset;
+
+  display: flex;
+}
+
+.card__image {
+  width: 100%;
+  margin: 0;
+}
+
+.card__pagination {
+  @include list-reset;
+
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+  }
 }
 
 .card__tab-button--active {
@@ -173,7 +194,7 @@
     padding: 14px 0;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     padding: 10px 0;
   }
 }
