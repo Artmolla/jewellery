@@ -222,6 +222,7 @@
           return '<li class=\'pagination__item '.concat(className, '\'>').concat(index + 1, '</li>');
         },
       },
+
       lazy: {
         loadPrevNext: true
       },
@@ -235,20 +236,28 @@
         0: {
           slidesPerView: 2,
           slidesPerGroup: 2,
+
           pagination: {
             type: 'fraction',
             renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-              return '<li class=\'pagination__item pagination__item--active '.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'pagination__item ').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
+              return '<li class=\'pagination__item pagination__item--active '
+              .concat(currentClass, '\' type=\'button\'>0')
+              .concat(index, '</li> of <li class=\'pagination__item ')
+              .concat(totalClass, '\' type=\'button\'>0')
+              .concat(total, '</li>');
             }
           }
         },
+
         768: {
           slidesPerView: 2,
           slidesPerGroup: 2,
+
           pagination: {
             type: 'bullets'
           }
         },
+
         1024: {
           slidesPerView: 4,
           slidesPerGroup: 4,
@@ -257,16 +266,18 @@
     });
 
     if (document.querySelector('.slider__container--thumbs') && document.querySelector('.slider__container--slides')) {
-      var thumbsPagination = new Swiper(".slider__container--thumbs", {
+      var thumbsPagination = new Swiper('.slider__container--thumbs', {
         slidesPerView: 'auto',
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+
         breakpoints: {
           768: {
             direction: 'horizontal',
             spaceBetween: 'auto',
           },
+
           1024: {
             direction: 'vertical',
             spaceBetween: 30,
@@ -275,7 +286,7 @@
       });
     }
 
-    var slides = new Swiper(".slider__container--slides", {
+    var slides = new Swiper('.slider__container--slides', {
       slidesPerView: 1,
 
       thumbs: {
@@ -288,7 +299,11 @@
             el: '.card__pagination',
             type: 'fraction',
             renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-              return '<li class=\'pagination__item pagination__item--card pagination__item--active '.concat(currentClass, '\' type=\'button\'>0').concat(index, '</li> of <li class=\'pagination__item ').concat(totalClass, '\' type=\'button\'>0').concat(total, '</li>');
+              return '<li class=\'pagination__item pagination__item--active '
+              .concat(currentClass, '\' type=\'button\'>0')
+              .concat(index, '</li> of <li class=\'pagination__item ')
+              .concat(totalClass, '\' type=\'button\'>0')
+              .concat(total, '</li>');
             }
           }
         },
