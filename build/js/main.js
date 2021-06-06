@@ -49,7 +49,8 @@
 
 (function () {
   if (document.querySelector('.header__open-menu-button')) {
-    var header = document.querySelector('.header');
+    var page = document.querySelector('.page');
+    var header = page.querySelector('.header');
     var menuButton = header.querySelector('.header__open-menu-button');
     var siteSearch = header.querySelector('.site-search');
     var logInField = header.querySelector('.user-area__item--log-in');
@@ -60,6 +61,7 @@
     }
 
     var menuOpen = function () {
+      page.classList.add('page--disabled');
       header.classList.add('header--menu-open');
       siteSearch.classList.add('site-search--menu-open');
       logInField.classList.add('user-area__item--menu-open');
@@ -71,6 +73,7 @@
     };
 
     var menuClose = function () {
+      page.classList.remove('page--disabled');
       header.classList.remove('header--menu-open');
       siteSearch.classList.remove('site-search--menu-open');
       logInField.classList.remove('user-area__item--menu-open');
