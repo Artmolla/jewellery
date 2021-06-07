@@ -234,7 +234,8 @@
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: function (index, className) {
-          return '<li class=\'pagination__item '.concat(className, '\'>').concat(index + 1, '</li>');
+          return '<li class=\'pagination__item ' +
+            className + '\'>' + (index + 1) + '</li>';
         },
       },
 
@@ -254,12 +255,11 @@
 
           pagination: {
             type: 'fraction',
-            renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-              return '<li class=\'pagination__item pagination__item--active '
-              .concat(currentClass, '\' type=\'button\'>0')
-              .concat(index, '</li> of <li class=\'pagination__item ')
-              .concat(totalClass, '\' type=\'button\'>0')
-              .concat(total, '</li>');
+            renderFraction: function (currentClass, totalClass) {
+              return '<li class=\'pagination__item ' +
+                currentClass + '\'></li>' +
+                ' of ' +
+                '<li class=' + totalClass + '></li>';
             }
           }
         },
@@ -313,12 +313,11 @@
           pagination: {
             el: '.card__pagination',
             type: 'fraction',
-            renderFraction: function renderFraction(currentClass, totalClass, index, total) {
-              return '<li class=\'pagination__item pagination__item--active '
-              .concat(currentClass, '\' type=\'button\'>0')
-              .concat(index, '</li> of <li class=\'pagination__item ')
-              .concat(totalClass, '\' type=\'button\'>0')
-              .concat(total, '</li>');
+            renderFraction: function (currentClass, totalClass) {
+              return '<li class=\'pagination__item ' +
+                currentClass + '\'></li>' +
+                ' of ' +
+                '<li class=' + totalClass + '></li>';
             }
           }
         },
