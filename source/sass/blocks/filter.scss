@@ -79,7 +79,12 @@
 }
 
 .filter__item {
-  margin: 0 0 12px 0;
+  margin: 0 0 10px 0;
+  padding: 1px 0;
+
+  &:focus-within {
+    outline: 2px auto $black;
+  }
 }
 
 .filter__button {
