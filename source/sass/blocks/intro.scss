@@ -1,0 +1,98 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 463px;
+  font-family: $secondary-font;
+  text-align: center;
+  color: $white;
+  background-color: $brown;
+  background-image: url("../img/backgrounds/bg-main-intro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0;
+    color: $white;
+
+    @media (max-width: $mobile-width) {
+      font-size: 38px;
+    }
+  }
+
+  p {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 38px;
+    margin: 0;
+
+    @media (max-width: $mobile-width) {
+      font-size: 34px;
+    }
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/backgrounds/bg-main-intro@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/backgrounds/bg-main-intro-tablet.jpg");
+  }
+
+  @media (max-width: $tablet-width) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/backgrounds/bg-main-intro-tablet@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/backgrounds/bg-main-intro-mobile.jpg");
+  }
+
+  @media (max-width: $mobile-width) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/backgrounds/bg-main-intro-mobile@2x.jpg");
+  }
+}
+
+.intro--inner {
+  min-height: 261px;
+  background-image: url("../img/backgrounds/bg-catalog-intro.jpg");
+
+  h2 {
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: -0.003em;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/backgrounds/bg-catalog-intro@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/backgrounds/bg-catalog-intro-tablet.jpg");
+  }
+
+  @media (max-width: $tablet-width) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/backgrounds/bg-catalog-intro-tablet@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/backgrounds/bg-catalog-intro-mobile.jpg");
+  }
+
+  @media (max-width: $mobile-width) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/backgrounds/bg-catalog-intro-mobile@2x.jpg");
+  }
+}
