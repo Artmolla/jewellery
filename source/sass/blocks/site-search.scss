@@ -3,8 +3,17 @@
   flex-basis: 30%;
   margin: 10px 0 0 0;
 
+  form {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   svg {
     margin-right: 10px;
+    transition: all ease-out 0.2s;
 
     @media (max-width: $tablet-width) {
       position: absolute;
@@ -23,13 +32,21 @@
     color: $liquorice;
     background: none;
     border: none;
-    transition: all ease-in-out 0.2s;
+    transition: all ease-out 0.2s;
 
     &:hover {
-      box-shadow: 0 0 0 1px $brown;
+      box-shadow: 0 3px 0 -1px $brown;
 
       @media (max-width: $tablet-width) {
-        box-shadow: 0 0 0 1px $white;
+        box-shadow: 0 0 0 2px $white;
+      }
+    }
+
+    &:hover + svg {
+      color: $brown;
+
+      @media (max-width: $tablet-width) {
+        color: inherit;
       }
     }
 
