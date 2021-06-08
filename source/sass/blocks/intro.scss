@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 463px;
+  margin: 0 0 118px 0;
   font-family: $secondary-font;
   text-align: center;
   color: $white;
@@ -44,6 +45,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    margin: 0 0 69px 0;
     background-image: url("../img/backgrounds/bg-main-intro-tablet.jpg");
   }
 
@@ -52,6 +54,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0 0 59px 0;
     background-image: url("../img/backgrounds/bg-main-intro-mobile.jpg");
   }
 
@@ -62,6 +65,7 @@
 
 .intro--inner {
   min-height: 261px;
+  margin: 0 0 60px 0;
   background-image: url("../img/backgrounds/bg-catalog-intro.jpg");
 
   h2 {
@@ -81,6 +85,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    margin: 0 0 30px 0;
     background-image: url("../img/backgrounds/bg-catalog-intro-tablet.jpg");
   }
 
@@ -89,6 +94,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0;
     background-image: url("../img/backgrounds/bg-catalog-intro-mobile.jpg");
   }
 
