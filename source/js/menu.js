@@ -9,20 +9,13 @@
     var logInField = header.querySelector('.user-area__item--log-in');
     var navigation = header.querySelector('.navigation');
 
-    if (header.querySelector('.header__intro')) {
-      var introSection = header.querySelector('.header__intro');
-    }
-
     var menuOpen = function () {
       page.classList.add('page--disabled');
       header.classList.add('header--menu-open');
       siteSearch.classList.add('site-search--menu-open');
       logInField.classList.add('user-area__item--menu-open');
       navigation.classList.add('navigation--menu-open');
-
-      if (introSection) {
-        introSection.classList.add('header__intro--menu-open');
-      }
+      page.addEventListener('keydown', keyPressHandler);
     };
 
     var menuClose = function () {
@@ -31,9 +24,14 @@
       siteSearch.classList.remove('site-search--menu-open');
       logInField.classList.remove('user-area__item--menu-open');
       navigation.classList.remove('navigation--menu-open');
+      page.removeEventListener('keydown', keyPressHandler);
+    };
 
-      if (introSection) {
-        introSection.classList.remove('header__intro--menu-open');
+    var keyPressHandler = function (evt) {
+      if (evt.key === 'Escape' || evt.key === 'Esc') {
+        evt.preventDefault();
+
+        menuClose();
       }
     };
 
@@ -41,11 +39,6 @@
     siteSearch.classList.remove('site-search--menu-open');
     logInField.classList.remove('user-area__item--menu-open');
     navigation.classList.remove('navigation--menu-open');
-
-    if (introSection) {
-      introSection.classList.remove('header__intro--menu-open');
-    }
-
     header.classList.remove('header--menu-no-js');
 
     menuButton.addEventListener('click', function () {
