@@ -34,7 +34,7 @@
 
 .faq__item {
   border-bottom: 1px solid $brown;
-  padding: 43px;
+  padding: 42px;
 
   h3 {
     font-style: normal;
@@ -74,7 +74,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 44px 50px;
+    padding: 43px 50px;
   }
 
   @media (max-width: $mobile-width) {
