@@ -54,13 +54,14 @@
     color: $white;
     padding: 9px 0 8px 0;
     background-color: $transparent;
+    transition: all ease-out 0.2s;
 
     &::placeholder {
       color: $grey;
     }
 
     &:hover {
-      outline: 1px solid $white;
+      box-shadow: 0 0 0 1px $white;
     }
 
     @media (max-width: $mobile-width) {

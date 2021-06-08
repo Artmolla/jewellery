@@ -3,10 +3,10 @@
 
   text-align: center;
   cursor: pointer;
-  transition: color ease-out 0.2s;
+  transition: all ease-out 0.2s;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   &:active {
