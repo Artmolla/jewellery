@@ -64,6 +64,10 @@
       box-shadow: 0 0 0 1px $white;
     }
 
+    @media (max-width: 1040px) {
+      width: 73%;
+    }
+
     @media (max-width: $mobile-width) {
       width: 60%;
     }
